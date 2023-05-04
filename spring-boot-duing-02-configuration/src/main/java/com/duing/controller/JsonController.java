@@ -7,6 +7,7 @@ import com.duing.config.FoodConfig;
 import com.duing.config.FruitConfig;
 import com.duing.config.VegetablesConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,8 +30,6 @@ public class JsonController {
 
     @Autowired
     private FoodConfig foodConfig;
-
-
     @RequestMapping("/json")
     public Food json(){
         Food food = new Food();
@@ -41,7 +40,6 @@ public class JsonController {
 
     @Autowired
     private VegetablesConfig vegetablesConfig;
-
     @RequestMapping("/vegetables")
     public Vegetables vegetables(){
         Vegetables vegetables = new Vegetables();
@@ -53,7 +51,6 @@ public class JsonController {
 
     @Autowired
     private FruitConfig fruitConfig;
-
     @RequestMapping("/fruit")
     public Fruit fruit(){
         Fruit fruit = new Fruit();
@@ -61,4 +58,18 @@ public class JsonController {
         fruit.setBanner(fruitConfig.getBanner());
         return fruit;
     }
+
+    @Value("${info.username}")
+    private String username;
+    @Value("${info,password}")
+    private String password;
+    @RequestMapping("/jasypt")
+    public String jasypt(){
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(username);
+        stringBuffer.append("\t");
+        stringBuffer.append(password);
+        return stringBuffer.toString();
+    }
+
 }
