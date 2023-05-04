@@ -7,4 +7,5 @@ import lombok.Setter;
 public class Food {
     private String meat;
     private String rice;
+    private String[] sauce;
 }

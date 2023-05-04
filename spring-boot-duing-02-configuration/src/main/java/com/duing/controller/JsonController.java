@@ -35,6 +35,7 @@ public class JsonController {
         Food food = new Food();
         food.setMeat(foodConfig.getMeat());
         food.setRice(foodConfig.getRice());
+        food.setSauce(foodConfig.getSauce());
         return food;
     }
 
@@ -61,7 +62,7 @@ public class JsonController {
 
     @Value("${info.username}")
     private String username;
-    @Value("${info,password}")
+    @Value("${info.password}")
     private String password;
     @RequestMapping("/jasypt")
     public String jasypt(){
