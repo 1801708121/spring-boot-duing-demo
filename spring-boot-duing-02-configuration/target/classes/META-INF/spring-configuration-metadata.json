@@ -1,0 +1,62 @@
+{
+  "groups": [
+    {
+      "name": "food",
+      "type": "com.duing.config.FoodConfig",
+      "sourceType": "com.duing.config.FoodConfig"
+    },
+    {
+      "name": "fruit",
+      "type": "com.duing.config.FruitConfig",
+      "sourceType": "com.duing.config.FruitConfig"
+    },
+    {
+      "name": "vegetables",
+      "type": "com.duing.config.VegetablesConfig",
+      "sourceType": "com.duing.config.VegetablesConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "food.meat",
+      "type": "java.lang.String",
+      "sourceType": "com.duing.config.FoodConfig"
+    },
+    {
+      "name": "food.rice",
+      "type": "java.lang.String",
+      "sourceType": "com.duing.config.FoodConfig"
+    },
+    {
+      "name": "food.sauce",
+      "type": "java.lang.String[]",
+      "sourceType": "com.duing.config.FoodConfig"
+    },
+    {
+      "name": "fruit.apple",
+      "type": "java.lang.String",
+      "sourceType": "com.duing.config.FruitConfig"
+    },
+    {
+      "name": "fruit.banner",
+      "type": "java.lang.String",
+      "sourceType": "com.duing.config.FruitConfig"
+    },
+    {
+      "name": "vegetables.eggplant",
+      "type": "java.lang.String",
+      "sourceType": "com.duing.config.VegetablesConfig"
+    },
+    {
+      "name": "vegetables.greenpeper",
+      "type": "java.lang.String",
+      "sourceType": "com.duing.config.VegetablesConfig"
+    },
+    {
+      "name": "vegetables.potato",
+      "type": "java.lang.String",
+      "sourceType": "com.duing.config.VegetablesConfig"
+    }
+  ],
+  "hints": []
+}

@@ -5,6 +5,9 @@
       <list>
         <option value="$PROJECT_DIR$/spring-boot-duing-01-helloworld/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-duing-02-configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-duing-03-template/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-duing-03-thymeleaf-crud/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-duing-03-web-restful/pom.xml" />
       </list>
     </option>
   </component>
