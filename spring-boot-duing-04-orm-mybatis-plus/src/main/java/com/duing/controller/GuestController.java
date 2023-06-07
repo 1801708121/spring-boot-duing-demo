@@ -4,8 +4,10 @@ import com.duing.model.guest;
 import com.duing.service.GuestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -28,5 +30,19 @@ public class GuestController {
         List<guest> guestList = guestService.list();
         model.addAttribute("guestList",guestList);
         return "list";
+    }
+
+    @GetMapping("/toAdd")
+    public String toAdd(){
+        return "add";
+    }
+
+    @Transactional
+    @PostMapping
+    public String add(guest guest){
+        guest.setId(Long.valueOf(1));
+        guestService.save(guest);
+        int result = 1/0;//异常处
+        return "redirect:/guest";
     }
 }
